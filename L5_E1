@@ -1,0 +1,9 @@
+unset IFS
+IFS=$'\t'
+
+
+while read name email city birthday_day birthday_month birdthday_year country
+do
+count=$((count+1))
+echo -e "$count\t$country"
+done < example_people_data.tsv
